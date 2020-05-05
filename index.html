@@ -1,0 +1,25 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/final_countdown.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+	//countdown mode
+	$('.countdown').final_countdown({date: '2020/7/30 12:25:02'});
+	
+	//still mode
+	$('.countdown2').final_countdown({
+		date: '2020/9/20 12:25:02',
+		still: true
+	});
+	
+	//seperate mode(array)
+	var cd = $.fn.final_countdown({date: '2020/7/30 12:25:02'});
+	$('.countdown3').text(cd[0] + ',' + cd[1] + ',' + cd[2] + ',' + cd[3]);
+});
+</script>
+
+
+
+<div class="countdown"></div>
+<div class="countdown2"></div>
+<div class="countdown3"></div>
